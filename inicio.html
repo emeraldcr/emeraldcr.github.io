@@ -9,30 +9,90 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 
     <title>Login</title>
+   
+    <script src="qrcode.min.js"></script>
   </head>
   <body>
     
     <!-- As a heading -->
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1">EmeraldApp</span>
+        <span class="navbar-brand mb-0 h1">EmeraldApp <small>[Menú Principal]</small></span>
         </div>
     </nav>
     <div class="row">
-        <div class="col-md-4"></div>
         <div class="col-md-4">
-            
+          <div class="card">
+            <div class="card-header text-center">
+             <a href="#" class="btn btn-primary">  Bienvenido Allan </a>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Medalla: Esmeralda  </h5>
+              <p class="card-text"><small>Code </small> </p>
+              <div id="qrcode"></div>
+             
+            </div>
+          </div>
         </div>
-        <div class="col-md-4"></div>
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div class="card-header">
+              <ul class="nav nav-pills card-header-pills">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Actividades</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Flora y Fauna</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">ChillSpot V.I.P</a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Halloween Party</h5>
+              <p class="card-text">31 de Octubre en Zona de Camping.</p>
+              <a href="#" class="btn btn-primary">Ver Evento</a>
+            </div>
+          </div>
+          <img src="principal.jpg" class="card-img-top" alt="...">
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header">
+              Puntos de Control
+            </div>
+            <div class="card-body">
+              <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action active">
+                Parte 1 
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">Reserva</a>
+                <a href="#" class="list-group-item list-group-item-action">Parqueo</a>
+                <a href="#" class="list-group-item list-group-item-action">Registro</a>
+                <a href="#" class="list-group-item list-group-item-action disabled">Restaurant</a>
+                <a href="#" class="list-group-item list-group-item-action disabled">Vestidores</a>
+                <a href="#" class="list-group-item list-group-item-action disabled">Lockers</a>
+                <a href="#" class="list-group-item list-group-item-action disabled">Mirador</a>
+                <a href="#" class="list-group-item list-group-item-action disabled">Peces</a>
+                <a href="#" class="list-group-item list-group-item-action disabled">Cabra</a>
+                <a href="#" class="list-group-item list-group-item-action disabled">Arbol Sombra</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
     </div>
    
 
 
 
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Optional JavaScript; choose one of the two! -->
-
+    <script type="text/javascript">
+      new QRCode(document.getElementById("qrcode"), { text:"Allan",widht:150,height:250});
+      </script>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 
