@@ -6,7 +6,8 @@ const router = express.Router();
 
 
 app.use('/img', express.static(path.join(__dirname, 'img')))
- 
+app.use('/img', express.static(path.join(__dirname, 'scripts')))
+
 router.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/index.html'));
   //__dirname : It will resolve to your project folder.

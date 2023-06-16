@@ -128,25 +128,51 @@
       .bgimg-2,
       .bgimg-3 {
         position: relative;
-        opacity: 0.65;
+        opacity: 0.95;
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
       }
-      .bgimg-1 {
-        background-image: url("img/img4.jpg");
-        min-height: 100%;
+    
+
+      /* Estilos CSS para mejorar la apariencia de la página */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
       }
 
-      .bgimg-2 {
-        background-image: url("img/img2.jpg");
-        min-height: 400px;
+      .section {
+        margin-bottom: 40px;
+       
       }
-
-      .bgimg-3 {
-        background-image: url("img/img3.jpg");
-        min-height: 400px;
+      .section-heading {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .section-content {
+        font-size: 16px;
+      }
+      .tour-list {
+        list-style-type: none;
+        padding: 0;
+      }
+      .tour-list li {
+        margin-bottom: 10px;
+      }
+      .reservation-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #3f51b5;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+      }
+      .reservation-button:hover {
+        background-color: #2c3e8c;
       }
     </style>
 
@@ -252,8 +278,8 @@
       </ul>
     </div>
 
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="mb-auto">
+    <div class="row  ">
+      <header class="mb-auto ">
         <div>
           <h3 class="float-md-start mb-0">La Vieja Adventures</h3>
           <nav class="nav nav-masthead justify-content-center float-md-end">
@@ -261,69 +287,278 @@
               class="nav-link fw-bold py-1 px-0 active"
               aria-current="page"
               href="#"
-              >Home</a
+              >Inicio</a
             >
-            <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
-            <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
+            <a class="nav-link fw-bold py-1 px-0" href="#">Sobre Nosotros</a>
+            <a class="nav-link fw-bold py-1 px-0" href="#">Contacto</a>
           </nav>
         </div>
+        <br> <br>
       </header>
-        
-     
-        
-        <div class="bgimg-1">
-          <div class="caption">
-            <h1>Bienvenido a La Vieja Adventures</h1>
-            <p>Explora la belleza natural del Cañón del Río La Vieja en Sucre, Ciudad Quesada, San Carlos. Únete a nosotros en una emocionante aventura llena de adrenalina y descubre el impresionante paisaje de la Ciudad Esmeralda. Nuestros tours guiados te llevarán a través de senderos, escaleras y el río, 
-              brindándote una experiencia única en contacto directo con la naturaleza.</p>        
-          </div>
-        </div>
-        
-        <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
-          <h2 class="section-heading">Tours y Precios</h2>
-          <ul class="tour-list">
-            <li>Tour a Ciudad Esmeralda: $25</li>
-            <li>Volcán Platanar: $28</li>
-            <li>Pozo Verde: $20</li>
-          </ul>
-          <p class="section-content">Ofrecemos una variedad de tours emocionantes para satisfacer tus deseos de aventura. Desde el desafiante Volcán Platanar hasta el refrescante Pozo Verde, tenemos opciones para todos los niveles de experiencia.</p>
-          <a href="#reservation" class="reservation-button">Reservar tu aventura</a>
+      <div class="section align-items-center">
+            <h2 class="display-6 text-center mb-4 ">Tours y Precios</h2>
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Ciudad Esmeralda</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title">$25<small class="text-muted fw-light"> </small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Visita a Ciudad Esmeralda</li>
+    <li>Duración: 4-5 horas</li>
+    <li>Exploración de la belleza natural y la cultura local</li>
+    <li>Tipo de terreno: Senderos forestales y colinas</li>
+    <li>Nivel de dificultad: Moderado</li>
+    <li>Qué llevar: Zapatos cómodos para caminar, protector solar, agua y refrigerios</li>
+ 
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-outline-danger">Reservar ahora</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Pozo Verde</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title">$20<small class="text-muted fw-light"> </small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Visita al Pozo Verde</li>
+                      <li>Duración: 2-3 horas</li>
+                      <li>Paseo refrescante en un entorno natural</li>
+                      <li>Tipo de terreno: Fácil acceso, caminos de tierra</li>
+                      <li>Nivel de dificultad: Fácil</li>
+                      <li>Qué llevar: Zapatos cómodos para caminar, protector solar, agua y refrigerios</li>
+                       </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-outline-primary">Reservar ahora</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                  <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Pozas de Sucre</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title">$18<small class="text-muted fw-light"> </small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Exploración de las Pozas de Sucre</li>
+                      <li>Duración: 4-5 horas</li>
+                      <li>Refrescante recorrido por hermosas pozas naturales</li>
+                      <li>Tipo de terreno: Rutas de senderismo y rocas</li>
+                      <li>Nivel de dificultad: Moderado</li>
+                      <li>Qué llevar: Zapatos de agua, traje de baño, toalla, protector solar, agua y refrigerios</li>
+                        </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-outline-primary">Reservar ahora</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                  <div
+                    class="card-header py-3 text-white bg-primary border-primary"
+                  >
+                    <h4 class="my-0 fw-normal">Exploración de las Minas de Azufre</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title">
+                      $29<small class="text-muted fw-light">/mo</small>
+                    </h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                   
+                      <li>Duración: 8-9 horas</li>
+                      <li>Aventura subterránea en cuevas y pasadizos</li>
+                      <li>Tipo de terreno: Rutas estrechas y subterráneas</li>
+                      <li>Nivel de dificultad: Alto</li>
+                      <li>Requisitos: Experiencia en espeleología, buena condición física, equipo de seguridad</li>
+                      <li>Qué llevar: Ropa resistente, casco con linterna, guantes, botas de senderismo, agua, alimentos energéticos</li>
+                  
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-primary">
+                      Contact us
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                  <div
+                    class="card-header py-3 text-white bg-primary border-primary"
+                  >
+                    <h4 class="my-0 fw-normal">Cerro Platanar</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title">
+                      $29<small class="text-muted fw-light">/mo</small>
+                    </h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Ascenso al Cerro Platanar</li>
+                      <li>Duración: 6-7 horas</li>
+                      <li>Tipo de terreno: Senderos empinados y rocosos</li>
+                      <li>Elevación: Aproximadamente 1,800 metros</li>
+                      <li>Nivel de dificultad: Alto</li>
+                      <li>Requisitos: Experiencia previa en senderismo de montaña, buena condición física</li>
+                      <li>Qué llevar: Botas de senderismo resistentes, ropa abrigada, agua, alimentos energéticos, protector solar, equipo de seguridad</li>
+                   
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-primary">
+                      Contact us
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                  <div
+                    class="card-header py-3 text-white bg-primary border-primary"
+                  >
+                    <h4 class="my-0 fw-normal">Cerro Porvenir</h4>
+                  </div>
+                  <div class="card-body">
+                    <h1 class="card-title pricing-card-title">
+                      $29<small class="text-muted fw-light">/mo</small>
+                    </h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                      <li>Excursión al Cerro Porvenir</li>
+                      <li>Duración: 6-7 horas</li>
+                      <li>Vistas panorámicas impresionantes</li>
+                      <li>Tipo de terreno: Senderos montañosos y empinados</li>
+                      <li>Elevación: Aproximadamente 2,000 metros</li>
+                      <li>Nivel de dificultad: Alto</li>
+                      <li>Requisitos: Experiencia previa en senderismo de montaña, buena condición física</li>
+                      <li>Qué llevar: Botas de senderismo resistentes, ropa abrigada, agua, alimentos energéticos, protector solar, equipo de seguridad</li>
+                       </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-primary">
+                      Contact us
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
-        
-        <div class="bgimg-2">
-          <div class="caption">
-            <h2 class="section-heading">Ubicación</h2>
-            <p class="section-content">Nos encontramos en Sucre, Ciudad Quesada, cerca de la entrada a San Carlos en la frontera con Zarcero. Nuestra ubicación está estratégicamente ubicada cerca de la autopista nacional, lo que facilita el acceso y el estacionamiento para todo tipo de vehículos. Puedes encontrar nuestra ubicación exacta en Google Maps a través de este enlace:</p>
-            <a href="https://www.google.com/maps/" target="_blank">Ver en Google Maps</a>
-         
-          </div>
+      <div>
+
+       
+      <div class="section align-items-center">
+        <div class="caption">
+          <div class="section"></div>
+          <h2 class="section-heading">Ubicación</h2>
+          <p class="section-content">
+            Nos encontramos en Sucre, Ciudad Quesada, cerca de la entrada a San
+            Carlos en la frontera con Zarcero. Nuestra ubicación está
+            estratégicamente ubicada cerca de la autopista nacional, lo que
+            facilita el acceso y el estacionamiento para todo tipo de vehículos.
+            Puedes encontrar nuestra ubicación exacta en Google Maps a través de
+            este enlace:
+          </p>
+          <br>
+          <a href="https://goo.gl/maps/KKjJE6z9kybcRtsd6" target="_blank"
+            >Ver en Google Maps</a
+          >
+          <br>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.8892489325217!2d-84.43819082272029!3d10.270506763675824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa067f4b8714307%3A0x964bf886a8c78704!2sLa%20Vieja%20Adventures!5e0!3m2!1ses-419!2smx!4v1686906467224!5m2!1ses-419!2smx"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
-        
-        <div style="position:relative;">
+      </div>
+      <br> <br>
+     
+        <div class="section bgimg-2 align-items-center">
           <h2 class="section-heading">Equipo y Seguridad</h2>
-          <p class="section-content">Tu seguridad es nuestra prioridad. Durante nuestros tours, te proporcionaremos todo el equipo necesario, incluyendo cascos de seguridad y arneses. Nuestros guías locales experimentados te acompañarán en todo momento, brindándote instrucciones y asegurándose de que tengas una experiencia segura y memorable.</p>
-        
+          <p class="section-content">
+            Tu seguridad es nuestra prioridad. Durante nuestros tours, te
+            proporcionaremos todo el equipo necesario, incluyendo cascos de
+            seguridad y arneses. Nuestros guías locales experimentados te
+            acompañarán en todo momento, brindándote instrucciones y asegurándose
+            de que tengas una experiencia segura y memorable.
+          </p>
         </div>
-        
-        <div class="bgimg-3">
-          <div class="caption">
-            <h2 class="section-heading">Renuncia y Liberación de Responsabilidad</h2>
-            <p class="section-content">Antes de participar en nuestras actividades de aventura, todos los participantes deben firmar un documento de Renuncia y Liberación de Responsabilidad. Este documento establece el conocimiento de los riesgos asociados con las actividades y libera a La Vieja Adventures de cualquier responsabilidad legal en caso de accidentes o incidentes durante los tours. La seguridad de nuestros clientes es fundamental, por lo que es importante seguir las instrucciones y recomendaciones proporcionadas por nuestros guías.</p>
-         
-          </div>
-        </div>
-        
-      <footer class="mt-auto text-white-50">
-        <h2 class="section-heading">¡Reserva tu aventura hoy mismo!</h2>
-        <p class="section-content">Embárcate en una aventura inolvidable con La Vieja Adventures y descubre la maravilla natural del Cañón del Río La Vieja. Contáctanos para más información y reserva tu tour hoy mismo.</p>
-        <a href="mailto:info@laviejaadventures.com" class="reservation-button">Contáctanos</a>
       
+
+      <div class="section bgimg-3 align-items-center">
+        <div class="caption">
+          <div class="section">
+          <h2 class="section-heading">
+            Renuncia y Liberación de Responsabilidad
+          </h2>
+          <p class="section-content">
+            Antes de participar en nuestras actividades de aventura, todos los
+            participantes deben firmar un documento de Renuncia y Liberación de
+            Responsabilidad. Este documento establece el conocimiento de los
+            riesgos asociados con las actividades y libera a La Vieja Adventures
+            de cualquier responsabilidad legal en caso de accidentes o
+            incidentes durante los tours. La seguridad de nuestros clientes es
+            fundamental, por lo que es importante seguir las instrucciones y
+            recomendaciones proporcionadas por nuestros guías.
+          </p>
+        </div>
+        </div>
+      </div>
+
+      <footer class="mt-auto text-white-50">
+        <div class="section">
+          <h2 class="section-heading">¡Reserva tu aventura hoy mismo!</h2>
+          <p class="section-content">
+            <div class="row">
+              <div class="col-12 col-md">
+                <img class="mb-2" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="24" height="19">
+                <small class="d-block mb-3 text-muted">&copy; 2017–2021</small>
+              </div>
+              <div class="col-6 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team feature</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Stuff for developers</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another one</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Last time</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Another resource</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Final resource</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Privacy</a></li>
+                  <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Terms</a></li>
+                </ul>
+              </div>
+            </div>
+          </p>
+          <a href="mailto:ciudadesmeraldacr" class="reservation-button"
+            >Contáctanos</a
+          >
+        </div>
       </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="/docs/4.0/assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    <script src="scripts/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script><script src="/docs/4.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js"></script><script src="/docs/4.0/assets/js/docs.min.js"></script>
+ 
   </body>
 </html>
