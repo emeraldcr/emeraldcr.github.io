@@ -19,10 +19,10 @@ const tours: Tour[] = [
         id: '005LVA', name: 'Cerro Porvenir', type: 'Extreme', duration: '2h 30m', children: false, lunch: true, photos: true,
     },
     {
-        id: '005LVA', name: 'Cerro Platanar', type: 'Extreme', duration: '2h 30m', children: false, lunch: true, photos: true,
+        id: '006LVA', name: 'Cerro Platanar', type: 'Extreme', duration: '2h 30m', children: false, lunch: true, photos: true,
     },
     {
-        id: '005LVA', name: 'San Vicente ( Hideaway)', type: 'Extreme', duration: '2h 30m', children: false, lunch: true, photos: true,
+        id: '007LVA', name: 'San Vicente ( Hideaway)', type: 'Extreme', duration: '2h 30m', children: false, lunch: true, photos: true,
     },
 ];
 
