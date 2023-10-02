@@ -1,6 +1,6 @@
 
-import Reserva from '../../pages/reservas/reserva'
-import Panel from '../../pages/type/panel'
+import Reserva from './pages/reservas/reserva'
+import Panel from './pages/type/panel'
 
 export default function Home() {
   return (
