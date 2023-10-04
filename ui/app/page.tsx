@@ -54,14 +54,7 @@ export default function Home() {
           height={37}
           priority
         />
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:opacity-75 opacity-100"
-          src="/5.png"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+
       </div>
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
