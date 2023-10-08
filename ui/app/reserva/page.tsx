@@ -1,140 +1,159 @@
 "use client";
-import { useState } from 'react';
+import * as React from 'react';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
-export default function Reserva() {
-  const [datosPersonales, setDatosPersonales] = useState({
+export default function ReservationForm() {
+  const [formData, setFormData] = React.useState({
     nombre: '',
     telefono: '',
     correo: '',
-  });
-
-  const [datosParticipantes, setDatosParticipantes] = useState({
     cantidadPersonas: '',
     nivelExperiencia: '',
     informacionAdicional: '',
+    desayuno: false, // Assuming 'desayuno' is a boolean value
     fecha: '',
   });
 
-  const handleDatosPersonalesChange = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setDatosPersonales({ ...datosPersonales, [name]: value });
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleDatosParticipantesChange = (e) => {
-    const { name, value } = e.target;
-    setDatosParticipantes({ ...datosParticipantes, [name]: value });
+  const handleCheckboxChange = (e) => {
+    const { name, checked } = e.target;
+    setFormData({ ...formData, [name]: checked });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Agregar aquí la lógica de envío de la reserva
+    // Handle form submission logic here
   };
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <form onSubmit={handleSubmit} className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-
-        {/* Sección de Datos Personales */}
-        <div className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
-          <h2 className="mb-3 text-2xl font-semibold">Datos Personales</h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            <input
-              type="text"
-              name="nombre"
-              value={datosPersonales.nombre}
-              onChange={handleDatosPersonalesChange}
-              placeholder="Nombre Completo"
-              required
-            />
-            <input
-              type="tel"
-              name="telefono"
-              value={datosPersonales.telefono}
-              onChange={handleDatosPersonalesChange}
-              placeholder="Teléfono"
-              required
-            />
-            <input
-              type="email"
-              name="correo"
-              value={datosPersonales.correo}
-              onChange={handleDatosPersonalesChange}
-              placeholder="Correo Electrónico"
-              required
-            />
-          </p>
+    <div >
+      <Box
+        className=' grid lg:grid-cols-4 flex '
+        component="form"
+        sx={{
+          '& > :not(style)': { m: 1, width: '25ch', color: 'white' },
+        }}
+        noValidate
+        autoComplete="off"
+        onSubmit={handleSubmit}
+      >
+        <div className='text-white '>
+          <h2 className=" text-2xl font-semibold">Datos Personales</h2>
+          <TextField
+            id="nombre"
+            name="nombre"
+            label="Nombre Completo"
+            variant="outlined"
+            value={formData.nombre}
+            onChange={handleChange}
+            fullWidth
+            required
+          />
+          <TextField
+            id="telefono"
+            name="telefono"
+            label="Teléfono"
+            variant="outlined"
+            value={formData.telefono}
+            onChange={handleChange}
+            fullWidth
+            required
+          />
+          <TextField
+            id="correo"
+            name="correo"
+            label="Correo Electrónico"
+            variant="outlined"
+            value={formData.correo}
+            onChange={handleChange}
+            fullWidth
+            required
+          />
         </div>
 
-        {/* Sección de Datos de Participantes */}
-        <div className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+        <div className=' '>
           <h2 className="mb-3 text-2xl font-semibold">Datos de Participantes</h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            <input
-              type="number"
-              name="cantidadPersonas"
-              value={datosParticipantes.cantidadPersonas}
-              onChange={handleDatosParticipantesChange}
-              placeholder="Cantidad De Personas"
-              required
-            />
-            <input
-              type="text"
-              name="nivelExperiencia"
-              value={datosParticipantes.nivelExperiencia}
-              onChange={handleDatosParticipantesChange}
-              placeholder="Nivel de Experiencia del Grupo en General"
-              required
-            />
-            <textarea
-              name="informacionAdicional"
-              value={datosParticipantes.informacionAdicional}
-              onChange={handleDatosParticipantesChange}
-              placeholder="Información Adicional de los Participantes"
-              rows="4"
-            />
-          </p>
+          <TextField
+            id="cantidadPersonas"
+            name="cantidadPersonas"
+            label="Cantidad De Personas"
+            variant="outlined"
+            type="number"
+            value={formData.cantidadPersonas}
+            onChange={handleChange}
+            fullWidth
+            required
+          />
+          <TextField
+            id="nivelExperiencia"
+            name="nivelExperiencia"
+            label="Nivel de Experiencia del Grupo"
+            variant="outlined"
+            value={formData.nivelExperiencia}
+            onChange={handleChange}
+            fullWidth
+            required
+          />
+          <TextField
+            id="informacionAdicional"
+            name="informacionAdicional"
+            label="Información Adicional"
+            variant="outlined"
+            multiline
+            rows={4}
+            value={formData.informacionAdicional}
+            onChange={handleChange}
+            fullWidth
+          />
         </div>
 
-        {/* Sección de Tipo de Tour / Servicios */}
-        <div className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
+        <div className=' '>
           <h2 className="mb-3 text-2xl font-semibold">Tipo de Tour / Servicios</h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            <label>
-              <input
-                type="checkbox"
-                name="desayuno"
-                value="Desayuno"
-              />{' '}
-              Desayuno
-            </label>
-            {/* Agrega más opciones de servicios aquí */}
-          </p>
-        </div>
-
-        {/* Sección de Confirmación */}
-        <div className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30">
-          <h2 className="mb-3 text-2xl font-semibold">Confirmación</h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
+          <label>
             <input
-              type="date"
-              name="fecha"
-              value={datosParticipantes.fecha}
-              onChange={handleDatosParticipantesChange}
-              required
+              type="checkbox"
+              id="desayuno"
+              name="desayuno"
+              checked={formData.desayuno}
+              onChange={handleCheckboxChange}
             />
-          </p>
+            Desayuno
+          </label>
+          {/* Add more options here */}
         </div>
 
-        {/* Botón de Envío */}
+        <div className=' '>
+          <h2 className="mb-3 text-2xl font-semibold">Confirmación</h2>
+          <TextField
+            id="fecha"
+            name="fecha"
+            label="Fecha"
+            variant="outlined"
+            type="date"
+            value={formData.fecha}
+            onChange={handleChange}
+            fullWidth
+            required
+          />
+        </div>
+
         <div className="col-span-4 text-center">
-          <button
-            className="mt-8 px-6 py-3 text-white bg-blue-500 rounded-lg hover:bg-blue-600"
+          <Button
+            variant="contained"
+            color="primary"
             type="submit"
+            style={{ marginTop: '16px' }}
           >
             Confirmar Reserva
-          </button>
+          </Button>
         </div>
-      </form>
-    </main>
+      </Box>
+    </div>
   );
 }
